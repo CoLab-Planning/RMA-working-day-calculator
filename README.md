@@ -2,6 +2,16 @@
 
 A web-based calculator for processing timeframes under the Resource Management Act 1991 (RMA) in New Zealand. This tool helps planners and consent processors accurately track statutory working days, accounting for excluded time periods, extensions, and non-working days.
 
+## Improvements and verification
+
+Use **Working day as at a date** to check progress without a decision date, or switch to completed-application mode. Current-day mode supports ongoing holds and defaults to today's New Zealand date.
+
+Draft-condition review under **s107G** is an optional excluded period, applicable from 20 October 2025. The authority sets a reasonable response period; no fixed review days are added. Only one s107G suspension is permitted. Enter actual first/last excluded dates, inclusive.
+
+Read the [calculation rules and sources](docs/CALCULATION-RULES.md), [testing report](docs/TEST-REPORT.md), and [hosting/release notes](docs/HOSTING.md).
+
+With Node 24 LTS (minimum 22.18), run `npm ci`, `npm run test:timezones`, `npm run lint`, and `npm run build`. GitHub Actions runs these checks for future changes.
+
 ## Features
 
 The calculator provides several key functionalities:
@@ -9,8 +19,9 @@ The calculator provides several key functionalities:
 - **Multiple Application Types**: Supports different consent types with varying statutory timeframes:
   - Standard (Non-Notified) — 20 working days
   - Fast-Track — 10 working days
-  - Limited Notified — 100 working days
-  - Publicly Notified — 130 working days
+  - Notified without a hearing — 60 working days
+  - Limited Notified with hearing — 100 working days
+  - Publicly Notified with hearing — 130 working days
 
 - **Smart Date Handling**: Automatically excludes non-working days from 2022-2030 including:
   - Weekends
@@ -34,7 +45,7 @@ Built using:
 - Tailwind CSS for styling
 - shadcn/ui component library
 - date-fns for date calculations
-- PapaParse for CSV processing
+- Bundled national holiday data and deterministic calendar-day calculations
 
 ## Local Development
 
@@ -43,7 +54,7 @@ To run this project locally:
 1. **Clone the repository**:
 
 ```
-git clone https://github.com/kinnoda-akl/RMA-working-day-calculator.git
+git clone https://github.com/CoLab-Planning/RMA-working-day-calculator.git
 ```
 
 2. **Install dependencies**:

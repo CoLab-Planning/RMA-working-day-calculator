@@ -8,8 +8,8 @@ The calculator's core functionality revolves around three main concepts:
 
 1. Date Calculations
    - Working days are calculated by excluding weekends and holidays
-   - The calculator reads holidays from a CSV file to maintain flexibility
-   - All date manipulations use the date-fns library for consistency
+   - National holiday data is bundled in src/data/holidays.ts; shutdown dates use an explicit rule
+   - Calculation arithmetic uses UTC day numbers; date-fns formats dates for display
 
 2. State Management
    - React's useState manages application state

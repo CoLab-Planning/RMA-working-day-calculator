@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [
     react(),
     visualizer({
-      open: true,                // Automatically opens the bundle analyzer after build
+      open: false,                // Automatically opens the bundle analyzer after build
       filename: 'dist/stats.html', // Where the report will be saved
       gzipSize: true,            // Shows gzipped sizes in report
       brotliSize: true,          // Shows brotli sizes in report
