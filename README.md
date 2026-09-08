@@ -72,7 +72,9 @@ npm run dev
 
 ## License
 
-This project is licensed under the Mozilla Public License 2.0. See the LICENSE file for details.
+Copyright (c) 2024-2026 CoLab Planning Limited.
+
+This project is licensed under the Mozilla Public License 2.0. See the LICENSE file for details. Every source file carries the MPL notice; if you distribute this software, or a modified version of it, in executable form (including serving it as a web page), the MPL requires you to keep those notices intact and to tell recipients where they can obtain the corresponding source code.
 
 ## Contributing
 

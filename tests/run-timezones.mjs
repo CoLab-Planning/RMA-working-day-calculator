@@ -1,3 +1,10 @@
+// Copyright (c) 2024-2026 CoLab Planning Limited
+// SPDX-License-Identifier: MPL-2.0
+//
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at https://mozilla.org/MPL/2.0/.
+
 import { spawnSync } from 'node:child_process';
 for (const TZ of ['Pacific/Auckland','UTC','America/Los_Angeles','Europe/London']) {
   const run = spawnSync(process.execPath, ['--test','tests/calculator.test.mjs'], { env: {...process.env,TZ}, encoding:'utf8' });
